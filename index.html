@@ -146,15 +146,29 @@
       color:var(--ink-mid);
       margin-bottom:2rem;
       letter-spacing:.02em;
+      display:flex;align-items:baseline;gap:0.35em;
     }
-    .hero-role span{
-      text-decoration:underline;
-      text-decoration-color:var(--blue);
-      text-decoration-thickness:2px;
-      text-underline-offset:4px;
+    .typed-wrap{
+      display:inline-flex;align-items:baseline;gap:0;
+      position:relative;
+    }
+    .typed-text{
       color:var(--ink);
       font-weight:500;
+      border-bottom:2.5px solid var(--blue);
+      padding-bottom:1px;
+      min-width:2px;
     }
+    .typed-cursor{
+      display:inline-block;
+      width:2px;height:1.15em;
+      background:var(--blue);
+      margin-left:2px;
+      vertical-align:middle;
+      border-radius:1px;
+      animation:blink .75s step-end infinite;
+    }
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
     .social-links{display:flex;gap:1rem;align-items:center;margin-bottom:2.5rem}
     .social-link{
@@ -336,7 +350,11 @@
     <div class="hero-content">
       <div class="hero-tag">Creative Designer &amp; Developer</div>
       <h1 class="hero-name">Sudharsan</h1>
-      <p class="hero-role">I'm <span>Designer &amp; Developer</span></p>
+      <p class="hero-role">I'm
+        <span class="typed-wrap">
+          <span class="typed-text" id="typedText"></span><span class="typed-cursor" id="typedCursor"></span>
+        </span>
+      </p>
 
       <div class="social-links">
         <!-- X/Twitter -->
@@ -459,7 +477,7 @@
       <div class="contact-grid">
         <div>
           <p style="font-size:.94rem;color:var(--ink-mid);line-height:1.8;margin-bottom:2rem;">Have a project in mind? I'd love to hear about it. Send me a message and I'll respond within 24 hours.</p>
-          <div class="c-detail rv"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val">sudharsan@email.com</div></div></div>
+          <div class="c-detail rv"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4e3d3b2a262f3c3d2f200e2b232f2722602d2123">[email&#160;protected]</a></div></div></div>
           <div class="c-detail rv d1"><div class="c-ico">📱</div><div><div class="c-lbl">Phone</div><div class="c-val">+91 99999 00000</div></div></div>
           <div class="c-detail rv d2"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Tamil Nadu, India</div></div></div>
         </div>
@@ -485,7 +503,7 @@
 
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Active nav on scroll
   const sections=document.querySelectorAll('.page');
   const navIcons=document.querySelectorAll('.nav-icon');
@@ -513,13 +531,22 @@
     setTimeout(()=>{b.textContent='Send Message →';b.style.background='';e.target.reset()},3000);
   }
 
-  // Nav click smooth scroll + active
-  document.querySelectorAll('.nav-icon').forEach(a=>{
-    a.addEventListener('click',function(){
-      navIcons.forEach(n=>n.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-</script>
-</body>
-</html>
+  // Typewriter effect
+  const roles=['Graphic Designer','UI/UX Designer','Web Developer','Creative Director'];
+  let ri=0,ci=0,deleting=false;
+  const el=document.getElementById('typedText');
+  function type(){
+    const word=roles[ri];
+    if(!deleting){
+      el.textContent=word.slice(0,ci+1);
+      ci++;
+      if(ci===word.length){setTimeout(()=>{deleting=true;type()},1800);return;}
+    } else {
+      el.textContent=word.slice(0,ci-1);
+      ci--;
+      if(ci===0){deleting=false;ri=(ri+1)%roles.length;}
+    }
+    setTimeout(type,deleting?60:100);
+  }
+  setTimeout(type,600);
+
