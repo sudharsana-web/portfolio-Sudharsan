@@ -100,13 +100,9 @@
     .port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
     .port-card{background:var(--bg);border-radius:16px;overflow:hidden;border:1px solid rgba(37,99,235,.08);transition:transform .25s,box-shadow .25s;cursor:pointer}
     .port-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(37,99,235,.12)}
-    .port-thumb{height:170px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative}
-    .pt-a{background:linear-gradient(135deg,#ffecd2,#fcb69f)}
-    .pt-b{background:linear-gradient(135deg,#d4fc79,#96e6a1)}
-    .pt-c{background:linear-gradient(135deg,#a18cd1,#fbc2eb)}
-    .pt-d{background:linear-gradient(135deg,#fccb90,#d57eeb)}
-    .pt-e{background:linear-gradient(135deg,#84fab0,#8fd3f4)}
-    .pt-f{background:linear-gradient(135deg,#f6d365,#fda085)}
+    .port-thumb{height:170px;position:relative;overflow:hidden;background:var(--bg2)}
+    .port-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease}
+    .port-card:hover .port-thumb img{transform:scale(1.06)}
     .port-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);border-radius:4px;padding:3px 10px;font-size:.67rem;font-weight:600;color:var(--ink-mid);letter-spacing:.07em;text-transform:uppercase}
     .port-body{padding:1.3rem}
     .port-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
@@ -232,7 +228,7 @@
         <div>
           <p class="about-intro rv">"Design is not just what it looks like — it's how it works."</p>
           <p class="about-body rv d1">I'm Sudharsan, a multidisciplinary designer and developer passionate about creating visual identities and digital experiences that leave a lasting impression. I bridge the gap between aesthetics and functionality, turning ideas into compelling realities.</p>
-          <p class="about-body rv d2">With expertise spanning graphic design, UI/UX, Digital Marketing creatives, and front-end development, I bring a full-stack creative perspective to every project.</p>
+          <p class="about-body rv d2">With expertise spanning graphic design, UI/UX, hospital marketing creatives, and front-end development, I bring a full-stack creative perspective to every project.</p>
           <div class="skill-chips rv d2">
             <span class="chip">Figma</span><span class="chip">Adobe PS</span><span class="chip">Illustrator</span>
             <span class="chip">HTML/CSS</span><span class="chip">Canva Pro</span><span class="chip">After Effects</span>
@@ -241,7 +237,7 @@
             <div class="skill-row"><span class="skill-label">Graphic Design</span><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
             <div class="skill-row"><span class="skill-label">UI / UX Design</span><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
             <div class="skill-row"><span class="skill-label">Web Development</span><div class="skill-track"><div class="skill-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div>
-            <div class="skill-row"><span class="skill-label">Digital Marketing</span><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
+            <div class="skill-row"><span class="skill-label">Hospital Marketing</span><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
             <div class="skill-row"><span class="skill-label">Social Media</span><div class="skill-track"><div class="skill-fill" style="width:92%"></div></div><span class="skill-pct">92%</span></div>
           </div>
         </div>
@@ -302,27 +298,45 @@
       <p class="s-sub">A curated collection of design projects across branding, UI, and marketing.</p>
       <div class="port-grid">
         <div class="port-card rv">
-          <div class="port-thumb pt-a">🏥<span class="port-badge">Hospital</span></div>
-          <div class="port-body"><div class="port-title">RR Fertility Centre</div><p class="port-desc">Seasonal social media campaigns, banners and promotional graphics for Digital Marketing.</p><a href="projects/rr-fertility/index.html" class="port-link">View Project</a></div>
+          <div class="port-thumb">
+            <img src="assets/img/project1.jpg" alt="RR Fertility Centre">
+            <span class="port-badge">Hospital</span>
+          </div>
+          <div class="port-body"><div class="port-title">RR Fertility Centre</div><p class="port-desc">Seasonal social media campaigns, banners and promotional graphics for hospital marketing.</p><a href="projects/rr-fertility/index.html" class="port-link">View Project</a></div>
         </div>
         <div class="port-card rv d1">
-          <div class="port-thumb pt-b">🧬<span class="port-badge">Branding</span></div>
+          <div class="port-thumb">
+            <img src="assets/img/project2.jpg" alt="Genesis IVF">
+            <span class="port-badge">Branding</span>
+          </div>
           <div class="port-body"><div class="port-title">Genesis IVF — Identity</div><p class="port-desc">Full brand identity system including logo, typography and marketing collateral.</p><a href="#" class="port-link">View Project</a></div>
         </div>
         <div class="port-card rv d2">
-          <div class="port-thumb pt-c">🎨<span class="port-badge">UI/UX</span></div>
+          <div class="port-thumb">
+            <img src="assets/img/project3.jpg" alt="Healthcare App Dashboard">
+            <span class="port-badge">UI/UX</span>
+          </div>
           <div class="port-body"><div class="port-title">Healthcare App Dashboard</div><p class="port-desc">Patient management dashboard with intuitive UI and responsive layouts.</p><a href="#" class="port-link">View Project</a></div>
         </div>
         <div class="port-card rv d1">
-          <div class="port-thumb pt-d">📣<span class="port-badge">Social</span></div>
+          <div class="port-thumb">
+            <img src="assets/img/project4.jpg" alt="Clinic Campaign Series">
+            <span class="port-badge">Social</span>
+          </div>
           <div class="port-body"><div class="port-title">Clinic Campaign Series</div><p class="port-desc">Multi-platform social campaign visuals for Instagram, Facebook and WhatsApp.</p><a href="#" class="port-link">View Project</a></div>
         </div>
         <div class="port-card rv d2">
-          <div class="port-thumb pt-e">💻<span class="port-badge">Web</span></div>
+          <div class="port-thumb">
+            <img src="assets/img/project5.jpg" alt="Portfolio Website">
+            <span class="port-badge">Web</span>
+          </div>
           <div class="port-body"><div class="port-title">Portfolio Website</div><p class="port-desc">This portfolio — designed and developed with pure HTML, CSS &amp; JS.</p><a href="#" class="port-link">View Project</a></div>
         </div>
         <div class="port-card rv d3">
-          <div class="port-thumb pt-f">🖼️<span class="port-badge">Print</span></div>
+          <div class="port-thumb">
+            <img src="assets/img/project6.jpg" alt="Event Banners & Standees">
+            <span class="port-badge">Print</span>
+          </div>
           <div class="port-body"><div class="port-title">Event Banners &amp; Standees</div><p class="port-desc">Large-format print designs for medical conferences and health awareness drives.</p><a href="#" class="port-link">View Project</a></div>
         </div>
       </div>
@@ -339,7 +353,7 @@
         <div class="srv-card rv"><span class="srv-ico">🎨</span><div class="srv-title">Graphic Design</div><p class="srv-desc">Logos, brand identity, print materials, social media creatives and marketing collateral.</p></div>
         <div class="srv-card rv d1"><span class="srv-ico">🖥️</span><div class="srv-title">UI/UX Design</div><p class="srv-desc">User-centric interface design for web and mobile, wireframes, prototypes and style guides.</p></div>
         <div class="srv-card rv d2"><span class="srv-ico">💻</span><div class="srv-title">Web Development</div><p class="srv-desc">Clean, fast, responsive websites built with HTML, CSS and JavaScript — no bloat.</p></div>
-        <div class="srv-card rv d3"><span class="srv-ico">🏥</span><div class="srv-title">Digital Marketing</div><p class="srv-desc">Specialised creatives for healthcare — patient campaigns, awareness drives and clinic branding.</p></div>
+        <div class="srv-card rv d3"><span class="srv-ico">🏥</span><div class="srv-title">Hospital Marketing</div><p class="srv-desc">Specialised creatives for healthcare — patient campaigns, awareness drives and clinic branding.</p></div>
         <div class="srv-card rv d1"><span class="srv-ico">📱</span><div class="srv-title">Social Media</div><p class="srv-desc">Platform-optimised content for Instagram, Facebook, LinkedIn — scroll-stopping visuals.</p></div>
         <div class="srv-card rv d2"><span class="srv-ico">🎬</span><div class="srv-title">Motion Graphics</div><p class="srv-desc">Animated posts, reels, intro videos and presentation motion design.</p></div>
       </div>
@@ -356,15 +370,15 @@
           <p style="font-size:.94rem;color:var(--ink-mid);line-height:1.8;margin-bottom:2rem;">Have a project in mind? Send me a message and I'll respond within 24 hours.</p>
           <div class="c-detail rv">
             <div class="c-ico">📧</div>
-            <div><div class="c-lbl">Email</div><div class="c-val">sudersansudersan51@gmail.com</div></div>
+            <div><div class="c-lbl">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="196a6c7d71786b6a7877597c74787075377a7674">[email&#160;protected]</a></div></div>
           </div>
           <div class="c-detail rv d1">
             <div class="c-ico">📱</div>
-            <div><div class="c-lbl">Phone</div><div class="c-val">+91 96776 64777</div></div>
+            <div><div class="c-lbl">Phone</div><div class="c-val">+91 99999 00000</div></div>
           </div>
           <div class="c-detail rv d2">
             <div class="c-ico">📍</div>
-            <div><div class="c-lbl">Location</div><div class="c-val">14/14 Telungu Chettiyar Street, Chithode, Erode Dist, Tamil Nadu, India</div></div>
+            <div><div class="c-lbl">Location</div><div class="c-val">Tamil Nadu, India</div></div>
           </div>
         </div>
         <form class="c-form rv" onsubmit="handleSubmit(event)">
@@ -377,7 +391,7 @@
             <select>
               <option value="">Select a service...</option>
               <option>Graphic Design</option><option>UI/UX Design</option>
-              <option>Web Development</option><option>Digital Marketing</option>
+              <option>Web Development</option><option>Hospital Marketing</option>
               <option>Social Media</option><option>Motion Graphics</option>
             </select>
           </div>
@@ -394,7 +408,7 @@
 
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // TYPEWRITER
   var roles = ['Graphic Designer','UI/UX Designer','Web Developer','Creative Director'];
   var ri = 0, ci = 0, deleting = false;
@@ -439,14 +453,4 @@
   function handleSubmit(e) {
     e.preventDefault();
     var b = e.target.querySelector('.f-submit');
-    b.textContent = 'Sent! ✓';
-    b.style.background = '#16a34a';
-    setTimeout(function() {
-      b.textContent = 'Send Message →';
-      b.style.background = '';
-      e.target.reset();
-    }, 3000);
-  }
-</script>
-</body>
-</html>
+    b.t
