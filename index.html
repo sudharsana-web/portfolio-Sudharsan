@@ -32,13 +32,10 @@
 
     /* HERO PHOTO */
     .hero-photo-area{position:absolute;right:0;top:0;bottom:0;width:44%;overflow:hidden;pointer-events:none;z-index:1}
-    .hero-photo{
-      width:100%;height:100%;
-      object-fit:cover;object-position:center top;
+    .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top;
       -webkit-mask-image:linear-gradient(to left,black 55%,transparent 100%),linear-gradient(to top,transparent 0%,black 18%);
       mask-image:linear-gradient(to left,black 55%,transparent 100%),linear-gradient(to top,transparent 0%,black 18%);
-      -webkit-mask-composite:intersect;mask-composite:intersect;
-    }
+      -webkit-mask-composite:intersect;mask-composite:intersect}
 
     .hero-content{position:relative;z-index:3;padding:0 6vw;max-width:680px}
     .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:1.5rem}
@@ -46,23 +43,22 @@
     .hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:700;line-height:1.0;color:var(--ink);margin-bottom:1rem;letter-spacing:-.02em}
 
     /* TYPEWRITER */
-    .hero-role{font-size:clamp(1rem,2vw,1.3rem);font-weight:400;color:var(--ink-mid);margin-bottom:2rem;letter-spacing:.02em;display:flex;align-items:baseline;gap:.35em}
-    .typed-wrap{display:inline-flex;align-items:baseline}
+    .hero-role{font-size:clamp(1rem,2vw,1.3rem);font-weight:400;color:var(--ink-mid);margin-bottom:2rem;display:flex;align-items:baseline;gap:.35em}
     .typed-text{color:var(--ink);font-weight:500;border-bottom:2.5px solid var(--blue);padding-bottom:1px}
     .typed-cursor{display:inline-block;width:2px;height:1.1em;background:var(--blue);margin-left:2px;vertical-align:middle;border-radius:1px;animation:blink .75s step-end infinite}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
     .social-links{display:flex;gap:1rem;align-items:center;margin-bottom:2.5rem}
-    .social-link{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink-mid);border:1px solid rgba(0,0,0,.08);transition:all .2s;backdrop-filter:blur(4px)}
+    .social-link{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink-mid);border:1px solid rgba(0,0,0,.08);transition:all .2s}
     .social-link:hover{background:var(--blue);color:var(--white);border-color:var(--blue);transform:translateY(-3px)}
     .social-link svg{width:18px;height:18px;fill:currentColor}
     .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-    .btn-blue{display:inline-block;background:var(--blue);color:var(--white);padding:13px 30px;border-radius:8px;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-decoration:none;transition:all .2s}
+    .btn-blue{display:inline-block;background:var(--blue);color:var(--white);padding:13px 30px;border-radius:8px;font-size:.85rem;font-weight:500;text-decoration:none;transition:all .2s}
     .btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,.3)}
     .btn-ghost{display:inline-block;border:1.5px solid rgba(30,36,51,.25);color:var(--ink-mid);padding:12px 30px;border-radius:8px;font-size:.85rem;font-weight:500;text-decoration:none;transition:all .2s}
     .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
 
-    /* SHARED */
+    /* SHARED SECTION STYLES */
     .section-inner{width:100%;padding:80px 6vw}
     .s-tag{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:.8rem}
     .s-tag::before{content:'';width:24px;height:2px;background:var(--blue)}
@@ -74,7 +70,7 @@
     .about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:center}
     .about-avatar{width:100%;max-width:300px;aspect-ratio:.8;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(37,99,235,.12)}
     .about-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
-    .about-intro{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:1.2rem}
+    .about-intro{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:1.2rem}
     .about-body{font-size:.94rem;color:var(--ink-mid);line-height:1.85;margin-bottom:1.4rem}
     .skill-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
     .chip{background:var(--bg);border:1px solid var(--bg2);border-radius:20px;padding:6px 16px;font-size:.78rem;font-weight:500;color:var(--ink-mid)}
@@ -105,13 +101,18 @@
     .port-card{background:var(--bg);border-radius:16px;overflow:hidden;border:1px solid rgba(37,99,235,.08);transition:transform .25s,box-shadow .25s;cursor:pointer}
     .port-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(37,99,235,.12)}
     .port-thumb{height:170px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative}
-    .pt-a{background:linear-gradient(135deg,#ffecd2,#fcb69f)}.pt-b{background:linear-gradient(135deg,#d4fc79,#96e6a1)}.pt-c{background:linear-gradient(135deg,#a18cd1,#fbc2eb)}.pt-d{background:linear-gradient(135deg,#fccb90,#d57eeb)}.pt-e{background:linear-gradient(135deg,#84fab0,#8fd3f4)}.pt-f{background:linear-gradient(135deg,#f6d365,#fda085)}
+    .pt-a{background:linear-gradient(135deg,#ffecd2,#fcb69f)}
+    .pt-b{background:linear-gradient(135deg,#d4fc79,#96e6a1)}
+    .pt-c{background:linear-gradient(135deg,#a18cd1,#fbc2eb)}
+    .pt-d{background:linear-gradient(135deg,#fccb90,#d57eeb)}
+    .pt-e{background:linear-gradient(135deg,#84fab0,#8fd3f4)}
+    .pt-f{background:linear-gradient(135deg,#f6d365,#fda085)}
     .port-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);border-radius:4px;padding:3px 10px;font-size:.67rem;font-weight:600;color:var(--ink-mid);letter-spacing:.07em;text-transform:uppercase}
     .port-body{padding:1.3rem}
     .port-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
     .port-desc{font-size:.83rem;color:var(--ink-soft);line-height:1.6;margin-bottom:.9rem}
     .port-link{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:var(--blue);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:gap .2s}
-    .port-link:hover{gap:9px}.port-link::after{content:'arrow'}
+    .port-link:hover{gap:9px}
     .port-link::after{content:'→'}
 
     /* SERVICES */
@@ -141,33 +142,55 @@
     .f-grp input,.f-grp textarea,.f-grp select{background:var(--white);border:1.5px solid rgba(37,99,235,.12);border-radius:8px;padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.89rem;color:var(--ink);outline:none;resize:none;transition:border-color .2s,box-shadow .2s}
     .f-grp input:focus,.f-grp textarea:focus,.f-grp select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
     .f-submit{background:var(--blue);color:var(--white);border:none;border-radius:8px;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:all .2s;align-self:flex-start}
-    .f-submit:hover{background:var(--blue-dark);transform:translateY(-2px)}
+    .f-submit:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,.3)}
     @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:2rem}.f-row{grid-template-columns:1fr}}
 
-    footer{background:var(--ink);color:rgba(255,255,255,.35);text-align:center;padding:1.6rem 5vw;font-size:.78rem}
+    /* FOOTER */
+    footer{background:var(--ink);color:rgba(255,255,255,.35);text-align:center;padding:1.8rem 5vw;font-size:.8rem;letter-spacing:.03em}
     footer span{color:#60a5fa}
 
+    /* REVEAL ANIMATION */
     .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
     .rv.on{opacity:1;transform:none}
     .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
-    @media(max-width:768px){body{flex-direction:column}.sidebar{position:fixed;bottom:0;left:0;right:0;top:auto;width:100%;height:64px;flex-direction:row;justify-content:center;gap:8px;padding:0 1rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,.07)}.main{margin-left:0;padding-bottom:64px}.nav-icon{width:46px;height:46px}.hero-photo-area{width:50%;opacity:.5}}
+    /* MOBILE */
+    @media(max-width:768px){
+      body{flex-direction:column}
+      .sidebar{position:fixed;bottom:0;left:0;right:0;top:auto;width:100%;height:64px;flex-direction:row;justify-content:center;gap:8px;padding:0 1rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,.07)}
+      .main{margin-left:0;padding-bottom:64px}
+      .nav-icon{width:46px;height:46px}
+      .hero-photo-area{width:50%;opacity:.6}
+    }
   </style>
 </head>
 <body>
 
+<!-- SIDEBAR NAV -->
 <nav class="sidebar">
-  <a class="nav-icon active" href="#hero" data-section="hero" title="Home"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
-  <a class="nav-icon" href="#about" data-section="about" title="About"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
-  <a class="nav-icon" href="#resume" data-section="resume" title="Resume"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></a>
-  <a class="nav-icon" href="#portfolio" data-section="portfolio" title="Portfolio"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></a>
-  <a class="nav-icon" href="#services" data-section="services" title="Services"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></a>
-  <a class="nav-icon" href="#contact" data-section="contact" title="Contact"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+  <a class="nav-icon active" href="#hero" data-section="hero" title="Home">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  </a>
+  <a class="nav-icon" href="#about" data-section="about" title="About">
+    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  </a>
+  <a class="nav-icon" href="#resume" data-section="resume" title="Resume">
+    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  </a>
+  <a class="nav-icon" href="#portfolio" data-section="portfolio" title="Portfolio">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+  </a>
+  <a class="nav-icon" href="#services" data-section="services" title="Services">
+    <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+  </a>
+  <a class="nav-icon" href="#contact" data-section="contact" title="Contact">
+    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
 </nav>
 
 <main class="main">
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="page" id="hero">
     <div class="mountains">
       <div class="mountain m1"></div><div class="mountain m2"></div>
@@ -180,7 +203,10 @@
     <div class="hero-content">
       <div class="hero-tag">Creative Designer &amp; Developer</div>
       <h1 class="hero-name">Sudharsan</h1>
-      <p class="hero-role">I'm <span class="typed-wrap"><span class="typed-text" id="typedText"></span><span class="typed-cursor"></span></span></p>
+      <p class="hero-role">
+        I'm &nbsp;
+        <span class="typed-text" id="typedText"></span><span class="typed-cursor"></span>
+      </p>
       <div class="social-links">
         <a class="social-link" href="#" title="Twitter/X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
         <a class="social-link" href="#" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -194,7 +220,7 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT SECTION -->
   <section class="page" id="about">
     <div class="section-inner">
       <div class="s-tag">About Me</div>
@@ -205,7 +231,8 @@
         </div>
         <div>
           <p class="about-intro rv">"Design is not just what it looks like — it's how it works."</p>
-          <p class="about-body rv d1">I'm Sudharsan, a multidisciplinary designer and developer passionate about creating visual identities and digital experiences that leave a lasting impression.</p>
+          <p class="about-body rv d1">I'm Sudharsan, a multidisciplinary designer and developer passionate about creating visual identities and digital experiences that leave a lasting impression. I bridge the gap between aesthetics and functionality, turning ideas into compelling realities.</p>
+          <p class="about-body rv d2">With expertise spanning graphic design, UI/UX, hospital marketing creatives, and front-end development, I bring a full-stack creative perspective to every project.</p>
           <div class="skill-chips rv d2">
             <span class="chip">Figma</span><span class="chip">Adobe PS</span><span class="chip">Illustrator</span>
             <span class="chip">HTML/CSS</span><span class="chip">Canva Pro</span><span class="chip">After Effects</span>
@@ -222,7 +249,7 @@
     </div>
   </section>
 
-  <!-- RESUME -->
+  <!-- RESUME SECTION -->
   <section class="page" id="resume">
     <div class="section-inner">
       <div class="s-tag">Resume</div>
@@ -232,41 +259,77 @@
         <div>
           <div class="col-head">💼 Experience</div>
           <div class="tl">
-            <div class="tl-item rv"><div class="tl-dot"></div><div><div class="tl-date">2023 – Present</div><div class="tl-role">Graphic Designer &amp; Web Developer</div><div class="tl-org">RR Fertility Centre / Genesis IVF</div></div></div>
-            <div class="tl-item rv d1"><div class="tl-dot"></div><div><div class="tl-date">2022 – 2023</div><div class="tl-role">UI/UX Designer</div><div class="tl-org">Freelance — Multiple Clients</div></div></div>
-            <div class="tl-item rv d2"><div class="tl-dot"></div><div><div class="tl-date">2021 – 2022</div><div class="tl-role">Social Media Creative Designer</div><div class="tl-org">Digital Agency (Contract)</div></div></div>
+            <div class="tl-item rv">
+              <div class="tl-dot"></div>
+              <div><div class="tl-date">2023 – Present</div><div class="tl-role">Graphic Designer &amp; Web Developer</div><div class="tl-org">RR Fertility Centre / Genesis IVF</div></div>
+            </div>
+            <div class="tl-item rv d1">
+              <div class="tl-dot"></div>
+              <div><div class="tl-date">2022 – 2023</div><div class="tl-role">UI/UX Designer</div><div class="tl-org">Freelance — Multiple Clients</div></div>
+            </div>
+            <div class="tl-item rv d2">
+              <div class="tl-dot"></div>
+              <div><div class="tl-date">2021 – 2022</div><div class="tl-role">Social Media Creative Designer</div><div class="tl-org">Digital Agency (Contract)</div></div>
+            </div>
           </div>
         </div>
         <div>
           <div class="col-head">🎓 Education</div>
           <div class="tl">
-            <div class="tl-item rv"><div class="tl-dot"></div><div><div class="tl-date">2019 – 2023</div><div class="tl-role">B.Sc. Visual Communication</div><div class="tl-org">University — Tamil Nadu</div></div></div>
-            <div class="tl-item rv d1"><div class="tl-dot"></div><div><div class="tl-date">2022</div><div class="tl-role">UI/UX Professional Certificate</div><div class="tl-org">Google — Coursera</div></div></div>
-            <div class="tl-item rv d2"><div class="tl-dot"></div><div><div class="tl-date">2021</div><div class="tl-role">Adobe Creative Suite Certification</div><div class="tl-org">Adobe — Online</div></div></div>
+            <div class="tl-item rv">
+              <div class="tl-dot"></div>
+              <div><div class="tl-date">2019 – 2023</div><div class="tl-role">B.Sc. Visual Communication</div><div class="tl-org">University — Tamil Nadu</div></div>
+            </div>
+            <div class="tl-item rv d1">
+              <div class="tl-dot"></div>
+              <div><div class="tl-date">2022</div><div class="tl-role">UI/UX Professional Certificate</div><div class="tl-org">Google — Coursera</div></div>
+            </div>
+            <div class="tl-item rv d2">
+              <div class="tl-dot"></div>
+              <div><div class="tl-date">2021</div><div class="tl-role">Adobe Creative Suite Certification</div><div class="tl-org">Adobe — Online</div></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
+  <!-- PORTFOLIO SECTION -->
   <section class="page" id="portfolio">
     <div class="section-inner">
       <div class="s-tag">Portfolio</div>
       <h2 class="s-title">Selected Work</h2>
       <p class="s-sub">A curated collection of design projects across branding, UI, and marketing.</p>
       <div class="port-grid">
-        <div class="port-card rv"><div class="port-thumb pt-a">🏥<span class="port-badge">Hospital</span></div><div class="port-body"><div class="port-title">RR Fertility Centre</div><p class="port-desc">Seasonal social media campaigns, banners and promotional graphics.</p><a href="projects/rr-fertility/index.html" class="port-link">View Project</a></div></div>
-        <div class="port-card rv d1"><div class="port-thumb pt-b">🧬<span class="port-badge">Branding</span></div><div class="port-body"><div class="port-title">Genesis IVF — Identity</div><p class="port-desc">Full brand identity system including logo, typography and collateral.</p><a href="#" class="port-link">View Project</a></div></div>
-        <div class="port-card rv d2"><div class="port-thumb pt-c">🎨<span class="port-badge">UI/UX</span></div><div class="port-body"><div class="port-title">Healthcare App Dashboard</div><p class="port-desc">Patient management dashboard with intuitive UI and responsive layouts.</p><a href="#" class="port-link">View Project</a></div></div>
-        <div class="port-card rv d1"><div class="port-thumb pt-d">📣<span class="port-badge">Social</span></div><div class="port-body"><div class="port-title">Clinic Campaign Series</div><p class="port-desc">Multi-platform social visuals for Instagram, Facebook and WhatsApp.</p><a href="#" class="port-link">View Project</a></div></div>
-        <div class="port-card rv d2"><div class="port-thumb pt-e">💻<span class="port-badge">Web</span></div><div class="port-body"><div class="port-title">Portfolio Website</div><p class="port-desc">This portfolio — designed and developed with pure HTML, CSS &amp; JS.</p><a href="#" class="port-link">View Project</a></div></div>
-        <div class="port-card rv d3"><div class="port-thumb pt-f">🖼️<span class="port-badge">Print</span></div><div class="port-body"><div class="port-title">Event Banners &amp; Standees</div><p class="port-desc">Large-format print designs for medical conferences and health drives.</p><a href="#" class="port-link">View Project</a></div></div>
+        <div class="port-card rv">
+          <div class="port-thumb pt-a">🏥<span class="port-badge">Hospital</span></div>
+          <div class="port-body"><div class="port-title">RR Fertility Centre</div><p class="port-desc">Seasonal social media campaigns, banners and promotional graphics for hospital marketing.</p><a href="projects/rr-fertility/index.html" class="port-link">View Project</a></div>
+        </div>
+        <div class="port-card rv d1">
+          <div class="port-thumb pt-b">🧬<span class="port-badge">Branding</span></div>
+          <div class="port-body"><div class="port-title">Genesis IVF — Identity</div><p class="port-desc">Full brand identity system including logo, typography and marketing collateral.</p><a href="#" class="port-link">View Project</a></div>
+        </div>
+        <div class="port-card rv d2">
+          <div class="port-thumb pt-c">🎨<span class="port-badge">UI/UX</span></div>
+          <div class="port-body"><div class="port-title">Healthcare App Dashboard</div><p class="port-desc">Patient management dashboard with intuitive UI and responsive layouts.</p><a href="#" class="port-link">View Project</a></div>
+        </div>
+        <div class="port-card rv d1">
+          <div class="port-thumb pt-d">📣<span class="port-badge">Social</span></div>
+          <div class="port-body"><div class="port-title">Clinic Campaign Series</div><p class="port-desc">Multi-platform social campaign visuals for Instagram, Facebook and WhatsApp.</p><a href="#" class="port-link">View Project</a></div>
+        </div>
+        <div class="port-card rv d2">
+          <div class="port-thumb pt-e">💻<span class="port-badge">Web</span></div>
+          <div class="port-body"><div class="port-title">Portfolio Website</div><p class="port-desc">This portfolio — designed and developed with pure HTML, CSS &amp; JS.</p><a href="#" class="port-link">View Project</a></div>
+        </div>
+        <div class="port-card rv d3">
+          <div class="port-thumb pt-f">🖼️<span class="port-badge">Print</span></div>
+          <div class="port-body"><div class="port-title">Event Banners &amp; Standees</div><p class="port-desc">Large-format print designs for medical conferences and health awareness drives.</p><a href="#" class="port-link">View Project</a></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- SERVICES SECTION -->
   <section class="page" id="services">
     <div class="section-inner">
       <div class="s-tag">Services</div>
@@ -274,16 +337,16 @@
       <p class="s-sub">End-to-end creative services — from concept to final delivery.</p>
       <div class="srv-grid">
         <div class="srv-card rv"><span class="srv-ico">🎨</span><div class="srv-title">Graphic Design</div><p class="srv-desc">Logos, brand identity, print materials, social media creatives and marketing collateral.</p></div>
-        <div class="srv-card rv d1"><span class="srv-ico">🖥️</span><div class="srv-title">UI/UX Design</div><p class="srv-desc">User-centric interface design for web and mobile, wireframes and prototypes.</p></div>
-        <div class="srv-card rv d2"><span class="srv-ico">💻</span><div class="srv-title">Web Development</div><p class="srv-desc">Clean, fast, responsive websites built with HTML, CSS and JavaScript.</p></div>
-        <div class="srv-card rv d3"><span class="srv-ico">🏥</span><div class="srv-title">Hospital Marketing</div><p class="srv-desc">Specialised creatives for healthcare — campaigns, awareness drives and clinic branding.</p></div>
-        <div class="srv-card rv d1"><span class="srv-ico">📱</span><div class="srv-title">Social Media</div><p class="srv-desc">Platform-optimised content for Instagram, Facebook, LinkedIn.</p></div>
+        <div class="srv-card rv d1"><span class="srv-ico">🖥️</span><div class="srv-title">UI/UX Design</div><p class="srv-desc">User-centric interface design for web and mobile, wireframes, prototypes and style guides.</p></div>
+        <div class="srv-card rv d2"><span class="srv-ico">💻</span><div class="srv-title">Web Development</div><p class="srv-desc">Clean, fast, responsive websites built with HTML, CSS and JavaScript — no bloat.</p></div>
+        <div class="srv-card rv d3"><span class="srv-ico">🏥</span><div class="srv-title">Hospital Marketing</div><p class="srv-desc">Specialised creatives for healthcare — patient campaigns, awareness drives and clinic branding.</p></div>
+        <div class="srv-card rv d1"><span class="srv-ico">📱</span><div class="srv-title">Social Media</div><p class="srv-desc">Platform-optimised content for Instagram, Facebook, LinkedIn — scroll-stopping visuals.</p></div>
         <div class="srv-card rv d2"><span class="srv-ico">🎬</span><div class="srv-title">Motion Graphics</div><p class="srv-desc">Animated posts, reels, intro videos and presentation motion design.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <section class="page" id="contact">
     <div class="section-inner">
       <div class="s-tag">Contact</div>
@@ -291,53 +354,99 @@
       <div class="contact-grid">
         <div>
           <p style="font-size:.94rem;color:var(--ink-mid);line-height:1.8;margin-bottom:2rem;">Have a project in mind? Send me a message and I'll respond within 24 hours.</p>
-          <div class="c-detail rv"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7c4c2d3dfd6c5c4d6d9f7d2dad6dedb99d4d8da">[email&#160;protected]</a></div></div></div>
-          <div class="c-detail rv d1"><div class="c-ico">📱</div><div><div class="c-lbl">Phone</div><div class="c-val">+91 99999 00000</div></div></div>
-          <div class="c-detail rv d2"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Tamil Nadu, India</div></div></div>
+          <div class="c-detail rv">
+            <div class="c-ico">📧</div>
+            <div><div class="c-lbl">Email</div><div class="c-val">sudharsan@email.com</div></div>
+          </div>
+          <div class="c-detail rv d1">
+            <div class="c-ico">📱</div>
+            <div><div class="c-lbl">Phone</div><div class="c-val">+91 99999 00000</div></div>
+          </div>
+          <div class="c-detail rv d2">
+            <div class="c-ico">📍</div>
+            <div><div class="c-lbl">Location</div><div class="c-val">Tamil Nadu, India</div></div>
+          </div>
         </div>
         <form class="c-form rv" onsubmit="handleSubmit(event)">
           <div class="f-row">
             <div class="f-grp"><label>Your Name</label><input type="text" placeholder="John Doe" required></div>
             <div class="f-grp"><label>Email Address</label><input type="email" placeholder="john@example.com" required></div>
           </div>
-          <div class="f-grp"><label>Service Needed</label>
-            <select><option value="">Select a service...</option><option>Graphic Design</option><option>UI/UX Design</option><option>Web Development</option><option>Hospital Marketing</option><option>Social Media</option><option>Motion Graphics</option></select>
+          <div class="f-grp">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Graphic Design</option><option>UI/UX Design</option>
+              <option>Web Development</option><option>Hospital Marketing</option>
+              <option>Social Media</option><option>Motion Graphics</option>
+            </select>
           </div>
           <div class="f-grp"><label>Message</label><textarea rows="5" placeholder="Tell me about your project..." required></textarea></div>
-          <button type="submit" class="f-submit">Send Message</button>
+          <button type="submit" class="f-submit">Send Message →</button>
         </form>
       </div>
     </div>
   </section>
 
-  <footer><p>2025 <span>Sudharsan</span>. Designed and Developed with love in Tamil Nadu.</p></footer>
+  <footer>
+    <p>© 2025 <span>Sudharsan</span>. Designed &amp; Developed with ❤️ in Tamil Nadu.</p>
+  </footer>
 
 </main>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  // TYPEWRITER
   var roles = ['Graphic Designer','UI/UX Designer','Web Developer','Creative Director'];
   var ri = 0, ci = 0, deleting = false;
   var typedEl = document.getElementById('typedText');
   function typeWriter() {
     var word = roles[ri];
-    if (!deleting) { ci++; typedEl.textContent = word.substring(0,ci); if(ci===word.length){deleting=true;setTimeout(typeWriter,1800);return;} }
-    else { ci--; typedEl.textContent = word.substring(0,ci); if(ci===0){deleting=false;ri=(ri+1)%roles.length;} }
-    setTimeout(typeWriter, deleting?60:110);
+    if (!deleting) {
+      ci++;
+      typedEl.textContent = word.substring(0, ci);
+      if (ci === word.length) { deleting = true; setTimeout(typeWriter, 1800); return; }
+    } else {
+      ci--;
+      typedEl.textContent = word.substring(0, ci);
+      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+    }
+    setTimeout(typeWriter, deleting ? 60 : 110);
   }
-  window.addEventListener('DOMContentLoaded', function(){ setTimeout(typeWriter,500); });
+  window.addEventListener('DOMContentLoaded', function() { setTimeout(typeWriter, 500); });
 
+  // ACTIVE NAV
   var sections = document.querySelectorAll('.page');
   var navIcons = document.querySelectorAll('.nav-icon');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ navIcons.forEach(function(n){n.classList.remove('active');}); var a=document.querySelector('.nav-icon[data-section="'+e.target.id+'"]'); if(a)a.classList.add('active'); } });
-  },{threshold:0.5});
-  sections.forEach(function(s){io.observe(s);});
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        navIcons.forEach(function(n) { n.classList.remove('active'); });
+        var a = document.querySelector('.nav-icon[data-section="' + e.target.id + '"]');
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(function(s) { io.observe(s); });
 
+  // SCROLL REVEAL
   var revEls = document.querySelectorAll('.rv');
-  var ro = new IntersectionObserver(function(entries){ entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');}); },{threshold:0.12});
-  revEls.forEach(function(el){ro.observe(el);});
+  var ro = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.12 });
+  revEls.forEach(function(el) { ro.observe(el); });
 
-  function handleSubmit(e){ e.preventDef
+  // CONTACT FORM
+  function handleSubmit(e) {
+    e.preventDefault();
+    var b = e.target.querySelector('.f-submit');
+    b.textContent = 'Sent! ✓';
+    b.style.background = '#16a34a';
+    setTimeout(function() {
+      b.textContent = 'Send Message →';
+      b.style.background = '';
+      e.target.reset();
+    }, 3000);
+  }
 </script>
 </body>
 </html>
