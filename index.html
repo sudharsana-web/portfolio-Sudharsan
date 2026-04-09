@@ -234,17 +234,20 @@ footer span{color:#60a5fa}
         <div class="c-detail rv d1"><div class="c-ico">📱</div><div><div class="c-lbl">Phone</div><div class="c-val">+91 96776 64777</div></div></div>
         <div class="c-detail rv d2"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Tamil Nadu, India</div></div></div>
       </div>
-      <form class="c-form rv" onsubmit="handleSubmit(event)">
-        <div class="f-row">
-          <div class="f-grp"><label>Your Name</label><input type="text" placeholder="John Doe" required></div>
-          <div class="f-grp"><label>Email Address</label><input type="email" placeholder="john@example.com" required></div>
-        </div>
-        <div class="f-grp"><label>Service Needed</label>
-          <select><option value="">Select a service...</option><option>Graphic Design</option><option>UI/UX Design</option><option>Web Development</option><option>Hospital Marketing</option><option>Social Media</option><option>Motion Graphics</option></select>
-        </div>
-        <div class="f-grp"><label>Message</label><textarea rows="5" placeholder="Tell me about your project..." required></textarea></div>
-        <button type="submit" class="f-submit">Send Message →</button>
-      </form>
+      <form action="https://formsubmit.co/sudersansudersan51@gmail.com" method="POST">
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Portfolio Message">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <textarea name="message" placeholder="Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+
+</form>
     </div>
   </div>
 </section>
