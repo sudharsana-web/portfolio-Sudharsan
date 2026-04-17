@@ -240,20 +240,22 @@ footer span{color:#60a5fa}
 
 <div style="max-width:800px; margin:auto;">
 
-<form
-  action="https://formspree.io/f/mykleald"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
+<form action="https://formspree.io/f/mykleald" method="POST">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <select name="service">
+    <option>Select a service...</option>
+    <option>Web Design</option>
+    <option>Development</option>
+  </select>
+
+  <textarea name="message" placeholder="Message" required></textarea>
+
   <button type="submit">Send</button>
+
 </form>
 
 </div>
