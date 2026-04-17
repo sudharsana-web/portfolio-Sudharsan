@@ -224,62 +224,32 @@ footer span{color:#60a5fa}
   </div>
 </section>
 
-<body style="font-family: Arial, sans-serif; background:#eef2f6; padding:40px; margin:0;">
-
-<div style="max-width:800px; margin:auto;">
-
-    <!-- ROW -->
-    <div style="display:flex; gap:20px; margin-bottom:20px; flex-wrap:wrap;">
-
-        <!-- NAME -->
-        <div style="flex:1; min-width:250px;">
-            <label style="display:block; margin-bottom:8px; color:#1e293b; font-weight:500;">
-                Your Name
-            </label>
-            <input type="text" placeholder="John Doe"
-                style="width:100%; padding:14px; border-radius:10px; border:1px solid #cbd5e1; background:#f8fafc; font-size:15px;">
+ <section class="page" id="contact">
+    <div class="section-inner">
+      <div class="s-tag">Contact</div>
+      <h2 class="s-title">Let's Work Together</h2>
+      <div class="contact-grid">
+        <div>
+          <p style="font-size:.94rem;color:var(--ink-mid);line-height:1.8;margin-bottom:2rem;">Have a project in mind? I'd love to hear about it. Send me a message and I'll respond within 24 hours.</p>
+          <div class="c-detail rv"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val">sudharsan@email.com</div></div></div>
+          <div class="c-detail rv d1"><div class="c-ico">📱</div><div><div class="c-lbl">Phone</div><div class="c-val">+91 99999 00000</div></div></div>
+          <div class="c-detail rv d2"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Tamil Nadu, India</div></div></div>
         </div>
-
-        <!-- EMAIL -->
-        <div style="flex:1; min-width:250px;">
-            <label style="display:block; margin-bottom:8px; color:#1e293b; font-weight:500;">
-                Email Address
-            </label>
-            <input type="email" placeholder="john@example.com"
-                style="width:100%; padding:14px; border-radius:10px; border:1px solid #cbd5e1; background:#f8fafc; font-size:15px;">
-        </div>
-
+        <form class="c-form rv" onsubmit="handleSubmit(event)">
+          <div class="f-row">
+            <div class="f-grp"><label>Your Name</label><input type="text" placeholder="John Doe" required></div>
+            <div class="f-grp"><label>Email Address</label><input type="email" placeholder="john@example.com" required></div>
+          </div>
+          <div class="f-grp">
+            <label>Service Needed</label>
+            <select><option value="">Select a service…</option><option>Graphic Design</option><option>UI/UX Design</option><option>Web Development</option><option>Hospital Marketing</option><option>Social Media</option><option>Motion Graphics</option></select>
+          </div>
+          <div class="f-grp"><label>Message</label><textarea rows="5" placeholder="Tell me about your project…" required></textarea></div>
+          <button type="submit" class="f-submit">Send Message →</button>
+        </form>
+      </div>
     </div>
-
-    <!-- SERVICE -->
-    <div style="margin-bottom:20px;">
-        <label style="display:block; margin-bottom:8px; color:#1e293b; font-weight:500;">
-            Service Needed
-        </label>
-        <select style="width:100%; padding:14px; border-radius:10px; border:1px solid #cbd5e1; background:#f8fafc; font-size:15px;">
-            <option>Select a service...</option>
-            <option>Web Design</option>
-            <option>Development</option>
-            <option>SEO</option>
-        </select>
-    </div>
-
-    <!-- MESSAGE -->
-    <div>
-        <label style="display:block; margin-bottom:8px; color:#1e293b; font-weight:500;">
-            Message
-        </label>
-        <textarea placeholder="Tell me about your project..."
-            style="width:100%; padding:14px; height:150px; border-radius:10px; border:1px solid #cbd5e1; background:#f8fafc; font-size:15px; resize:none;"></textarea>
-    </div>
-
-    <!-- BUTTON -->
-    <button type="submit"
-        style="margin-top:20px; background:#3366cc; color:#fff; padding:14px 28px; border:none; border-radius:10px; font-size:15px; cursor:pointer;">
-        SEND MESSAGE →
-    </button>
-
-</div>
+  </section>
 
 <footer><p>© 2025 <span>Sudharsan</span>. Designed &amp; Developed with ❤️ in Tamil Nadu.</p></footer>
 </main>
